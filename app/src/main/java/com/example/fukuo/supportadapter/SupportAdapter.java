@@ -54,7 +54,7 @@ public class SupportAdapter extends ArrayAdapter {
         }
     }
 
-    public ViewHolder createViewHolder(View view) {
+    private ViewHolder createViewHolder(View view) {
         ViewHolder holder = null;
 
         try {

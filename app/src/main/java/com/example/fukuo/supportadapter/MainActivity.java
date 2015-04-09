@@ -21,10 +21,15 @@ public class MainActivity extends ActionBarActivity {
         adapter.setViewHolder(StringViewHolder.class);
 
         lv.setAdapter(adapter);
-        adapter.add("aaaaa");
+        adapter.add("a1");
     }
 
-    class StringViewHolder extends ViewHolder<String>{
+    class Item{
+        String name;
+        int id;
+    }
+
+    class StringViewHolder extends ViewHolder<Item>{
 
         TextView textView;
 
@@ -38,8 +43,8 @@ public class MainActivity extends ActionBarActivity {
         }
 
         @Override
-        public void bindItem(String item) {
-            textView.setText(item);
+        public void bindItem(Item item) {
+            textView.setText(item.name);
         }
     }
 }
